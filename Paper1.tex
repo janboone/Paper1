@@ -71,13 +71,13 @@ pdftitle={Asymmetric Agents and their Willingness to Fight}]{hyperref}
 	
 \maketitle
 
-Consider the market for smartphones. Two firms compete over customers with heterogeneous preferences. For simplicity assume that devices are sold at an exogenously given price such that firm $1$ derives a profit of $\gamma_i$ from each customer.
+Consider the market for smartphones. Two firms compete over customers with heterogeneous preferences. Devices are sold at an exogenously given price such that firm $1$ derives a profit of $\gamma_i$ from each customer.
 
 Customer $k$ exhibit a preference for one of the two products that is given by $\theta_k$. $\theta_k\gg0$ implies that customers $k$ has a strong preference for the device sold by firm $2$, $\theta_k\ll0$ that she has a strong preference for product $1$ and $\theta_k\approxeq 0$ that she has a preference for neither of the firms. Preferences of the customers are distributed according to the cdf $G(\cdot)$ and the pdf $g(\cdot)$.
 
-The preferences are taken as exogenously given. They are either derived from a non-marketable unique characteristic of the products (some people dislike the sharp shape, others love it), or they are derived from previous interactions with the firm. More about this later.
+Preferences are taken as exogenously given. They are either derived from a non-marketable unique characteristic of the products (some people dislike the sharp edges of the device, others love it), or they are derived from previous interactions with the firm. This can be used as the starting point for a dynamic model, but more about this later.
 
-Firms compete in R\&D efforts to increase the quality of their own products. While having a higher quality level helps to gain customers from the competitors, it does not help to increase the return per customer. People are willing to pay a certain amount for a smartphone, but as better products enter the market, the prices for the worse products decrease so that the quality frontier always receives the same valuation.
+Firms compete in R\&D efforts to increase the quality of their own products. A higher quality level helps to gain customers from the competitors. It can also help to increase the revenue per customer. People are willing to pay a certain amount for a smartphone, and the quality might have a strong impact on their decision which device to buy, while there willingness to pay could remain unchanged ($\frac{\partial \gamma_i}{\partial x_i}=0$) it will often increase ($\frac{\partial \gamma_i}{\partial x_i}=0$).
 
 Customer $k$ purchases product $2$ if and only if the difference in quality overcompensates for her own loyalty:
 $$\theta_k\geq x_1-x_2$$
@@ -95,10 +95,12 @@ G(x_1-x_2)\gamma_1 - c_1x_1^2/2\\
 
 The optimal effort level for both firms is thus:
 \begin{align}
-x_1^C = g(x_1^C-x_2^C)\frac{\gamma_1}{c_1}\\
-x_2^C = g(x_1^C-x_2^C)\frac{\gamma_2}{c_2}
+x_1^C &= g(x_1^C-x_2^C)\frac{\gamma_1}{c_1} + G(x_1-x_2)\frac{\partial \gamma_1}{\partial x_1}\frac{1}{c_1}\\
+x_2^C &= g(x_1^C-x_2^C)\frac{\gamma_2}{c_2} + \big(1-G(x_1-x_2)\big)\frac{\partial \gamma_2}{\partial x_2}\frac{1}{c_2}
 \end{align}
-\textbf{Here some things are missing (zero efforts, asymmetry, etc...)}Thus, w.l.g. we can normalize the effort costs to $1$. Depending on the shape of $G(\cdot)$ the game might have multiple equilibria. To avoid uniqueness the following discussion focuses only on local changes.
+As long as $g(\cdot)>0$, efforts will be non-zero. If the return per customer is independent of the efforts, we can normalize the effort costs to $1$. Depending on the shape of $G(\cdot)$ the game might have multiple equilibria. To avoid uniqueness the following discussion focuses only on local changes. 
+
+For the connection of the valuation and the efforts it should be assumed that $\gamma_1'(x_1)\geq 0$  and that $\gamma_1''(x_1) - c_1<0$. This implies that efforts don't decrease the valuation of the product and that in lieu of competition the optimal level of efforts is finite.
 
 The reaction function of firm $i$ to a change in the efforts of firm $j$ is derived as:
 \begin{align}
