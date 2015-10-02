@@ -100,8 +100,19 @@ x_2^C &= g(x_1^C-x_2^C)\frac{\gamma_2}{c_2} + \big(1-G(x_1-x_2)\big)\frac{\parti
 \end{align}
 As long as $g(\cdot)>0$, efforts will be non-zero. If the return per customer is independent of the efforts, we can normalize the effort costs to $1$. Depending on the shape of $G(\cdot)$ the game might have multiple equilibria. To avoid uniqueness the following discussion focuses only on local changes. 
 
-For the connection of the valuation and the efforts it should be assumed that $\gamma_1'(x_1)\geq 0$  and that $\gamma_1''(x_1) - c_1<0$. This implies that efforts don't decrease the valuation of the product and that in lieu of competition the optimal level of efforts is finite.
+For the connection of the valuation and the efforts it should be assumed that $\gamma_1'(x_1)\geq 0$, such that efforts of a firm do not negatively effect its revenue, and that $\gamma_1''(x_1) - c_1<0$. This implies that efforts don't decrease the valuation of the product and that in lieu of competition the optimal level of efforts is finite.
 
+\subsection{General Case}
+The reaction function of firm $1$ to a change in the efforts of firm $2$ is given by:
+\begin{align}
+\frac{\d x_1}{\d x_2} &= g'(x_1^C-x_2^C)\left(\frac{\d x_1}{\d x_2}-1\right)\frac{\gamma_1}{c_1} + g(x_1-x_2)\left(\frac{\d x_1}{\d x_2}-1\right)\frac{\partial \gamma_1}{\partial x_1}\frac{1}{c_1} + G(x_1-x_2)\frac{\partial^2 \gamma_1}{\partial^2 x_1}\frac{\d x_1}{\d x_2}\frac{\gamma}{c_1}\\
+\frac{\d x_1}{\d x_2} &= A_i^{-1} \left(-g'(x_1^C-x_2^C)\frac{\gamma_1}{c_1} - g(x_1-x_2)\frac{\partial \gamma_1}{\partial x_1}\frac{1}{c_1}\right)\\
+A_i &= 1 - g'(x_1^C-x_2^C)\frac{\gamma_1}{c_1}-g(x_1-x_2)\frac{\partial \gamma_1}{\partial x_1}\frac{1}{c_1}-G(x_1-x_2)\frac{\partial^2 \gamma_1}{\partial^2 x_1}\frac{\gamma}{c_1}
+\end{align}
+
+Assuming that $A_i>0$, that $\frac{\partial \gamma_1}{\partial x_1}>0$, we find that the sign of the reaction function depends on $g'(\cdot)$. The reaction is positive if $g'(\cdot)$ is sufficiently negative. Then the level of competition increase sufficiently to raise the incentives to compete more. If $g'(\cdot)$ is close to zero, competition intensity does still increase, but is offset by the lower market share. A lower market share makes extracting profits from the customers less valuable, thus making $\frac{\partial \gamma_i}{\partial x_i}$ less important. Thus, for small negative and large positive $g'(\cdot)$ and increase in $x_2$ leads to lower competition and a lower effort by $1$. 
+
+\subsection{Without positive effect on revue}
 The reaction function of firm $i$ to a change in the efforts of firm $j$ is derived as:
 \begin{align}
 \frac{\d x_1^C}{\d x_2} &= g'(x_1^C-x_2^C)\gamma_1\left(\frac{\d x_1^C}{\d x_2}-1\right)\\
