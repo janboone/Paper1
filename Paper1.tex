@@ -59,8 +59,9 @@ pdftitle={Asymmetric Agents and their Willingness to Fight}]{hyperref}
 
 %-------------------------------------------------------------
 % Page Layout
-%\usepackage{fullpage} %less margins
-\usepackage[margin=2cm]{geometry} %better margin control
+\usepackage[a4paper, top=2cm, bottom=2cm, left=1.5cm, right=5cm, marginparwidth=4cm]{geometry}	%For working paper
+%\usepackage[a4paper, left=1.5cm, right=5cm, marginparwidth=3cm]{geometry}
+%better margin control
 % Geometry: margin, left, right
 
 \author{Clemens Fiedler}
@@ -72,8 +73,8 @@ pdftitle={Asymmetric Agents and their Willingness to Fight}]{hyperref}
 \maketitle
 
 \section{Model Set Up}
-Consider a stylist market for smartphones. Two firms compete over customers with heterogeneous preferences. Devices are sold at an exogenously given price such that firm $1$ derives a profit of $\gamma_i$ from each customer.
-
+Consider the market for smartphones. Two firms compete over customers with heterogeneous preferences. Devices are sold at an exogenously given price such that firm $1$ derives a profit of $\gamma_i$ from each customer
+ 
 Customer $k$ exhibits a preference for one of the two products given by $\theta_k$. $\theta_k\gg0$ implies that customers $k$ has a strong preference for the device sold by firm $2$, $\theta_k\ll0$ that she has a strong preference for product $1$ and $\theta_k\approxeq 0$ that she prefers neither of the firms. Preferences of the customers are exogenously determined and distributed according to the CDF $G(\cdot)$ and the PDF $g(\cdot)$.
 
 Preferences are taken as exogenously given. They are either derived from a non-marketable unique characteristic of the products (some people dislike the sharp edges of the device, others love it), or they are derived from previous interactions with the firm. This can be used as the starting point for a dynamic model, but more about this later.
@@ -117,18 +118,20 @@ A_i &= 1 - g'(x_1^C-x_2^C)\frac{\gamma_1}{c_1}-g(x_1-x_2)\frac{\partial \gamma_1
 Assuming that $A_i>0$ and that $\frac{\partial \gamma_1}{\partial x_1}>0$, we find that the sign of the reaction function depends on $g'(\cdot)$. The reaction is positive if $g'(\cdot)$ is sufficiently negative. Then the level of competition increase sufficiently to raise the incentives to compete more intensively. If $g'(\cdot)$ is close to zero, competition intensity does still increase, but is offset by the lower market share. A lower market share makes extracting profits from the customers less valuable, thus making $\frac{\partial \gamma_i}{\partial x_i}$ less important. Thus, for small negative and large positive $g'(\cdot)$ and increase in $x_2$ leads to lower competition and a lower effort by $1$. 
 
 \subsection{Without positive effect on revenue}
-The reaction function of firm $i$ to a change in the efforts of firm $j$ is derived as:
+The reaction function of firm $i$ to a change in the efforts of firm $j$ is:
 \begin{align}
 \frac{\d x_1^C}{\d x_2} &= g'(x_1^C-x_2^C)\gamma_1\left(\frac{\d x_1^C}{\d x_2}-1\right)\\
 \frac{\d x_1^C}{\d x_2} &= \frac{-g'(x_1^C-x_2^C)\gamma_1}{1+g'(x_1^C-x_2^C)\gamma_1}
 \end{align}
-If $g'(x_1^C-x_2^C)<-1$ the market cannot be in equilibrium as an increase in $x_1$ would lead to an even greater increase in $x_1$ already by itself.
+If $g'(x_1^C-x_2^C)\gamma_1<-1$ the market cannot be in equilibrium as an increase in $x_1$ would lead to an even greater increase in $x_1$ already by itself.
 
-If $-1<g'(x_1^C-x_2^C)<0$ this expression is positive, such that an increase in $x_2$ leads to an increase in $x_1$ and thus an overall escalation. The increase in $x_2$ increases the number of indifferent customers, such that competition becomes more intense. If $g'(x_1^C-x_2^C)>0$ this expression is negative and an increase in $x_2$ leads to crowding out of $x_1$. 
+If $-\frac{1}{\gamma_1}<g'(x_1^C-x_2^C)<0$ this expression is positive, such that an increase in $x_2$ leads to an increase in $x_1$ and thus an overall escalation. The increase in $x_2$ increases the number of indifferent customers, such that competition becomes more intense. If $g'(x_1^C-x_2^C)>0$ this expression is negative and an increase in $x_2$ leads to crowding out of $x_1$. 
 
-Returning to the example of the smartphone sector. Consider $g(\cdot)$ such that it is $-1<g'(\theta)$ for all $\theta$. Additionally, most customers are centered in the middle with smaller tails. This can be described by: $g'(0)=0$ and $g'(\theta)<0, \theta>0$,$g'(\theta)<0, \theta<0$. Most customer are willing to switch to the superior product, while a small number has some inherent preference for one.
+Returning to the example of the smartphone sector, we consider a distribution that satisfies $-\frac{1}{\gamma_1}<g'(\theta)<\frac{1}{\gamma_1}$ for all $\theta$.\marginpar{I need to address symmetry earlier in the text.} Additionally, most customers are centered in the middle with only few highly loyal customers. This can be described by $g'(0)=0$ and $g'(\theta)<0, \theta>0; g'(\theta)<0, \theta<0$. Most customer are willing to switch to the superior product, while a small number has some inherent preference for one.
 
-Now consider a third party, that is maximizing a function of $x_1, x_2$. The utility of the research and development expenses of the firm is given by $U(x_1,x_2)$ with $\frac{\partial U(x_1,x_2)}{\partial x_1},\frac{\partial U(x_1,x_2)}{\partial x_2}>0$. This is achieved my affecting the incentives of the firms. To simplify the problem assume that the third party intervenes in $\gamma_2$ and that firm $2$ is the disadvantaged firm with $\gamma_1>\gamma_2$. The optimal $\gamma_2$ is given by:
+\section{Third Party}
+
+Now consider a third party, that is maximizing a function of $x_1, x_2$. The utility of the research and development expenses of the firm is given by $U(x_1,x_2)$ with $\frac{\partial U(x_1,x_2)}{\partial x_1},\frac{\partial U(x_1,x_2)}{\partial x_2}>0$. This is achieved by affecting the incentives of the firms. To simplify the problem we assume that the third party intervenes in $\gamma_2$ and that firm $2$ is the disadvantaged firm with $\gamma_1\geq\gamma_2$. The optimal $\gamma_2$ is given by:
 
 \begin{align}
 \frac{\d U(x_1,x_2)}{\d \gamma_2} &= \frac{\partial U(x_1,x_2)}{\partial x_1}\frac{\d x_1}{\d \gamma_2} + \frac{\partial U(x_1,x_2)}{\partial x_2}\frac{\d x_2}{\d \gamma_2}\\
