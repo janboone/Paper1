@@ -131,16 +131,39 @@ Returning to the example of the smartphone sector, we consider a distribution th
 
 \section{Third Party}
 
-Now consider a third party, that is maximizing a function of $x_1, x_2$. The utility of the research and development expenses of the firm is given by $U(x_1,x_2)$ with $\frac{\partial U(x_1,x_2)}{\partial x_1},\frac{\partial U(x_1,x_2)}{\partial x_2}>0$. This is achieved by affecting the incentives of the firms. To simplify the problem we assume that the third party intervenes in $\gamma_2$ and that firm $2$ is the disadvantaged firm with $\gamma_1\geq\gamma_2$. The optimal $\gamma_2$ is given by:
+Now consider a third party, that is maximizing the efforts $x_1$ and $x_2$, weighted with some function. The utility derived from the R\&D expenditures is given by $U(x_1,x_2)$ with $\frac{\partial U(x_1,x_2)}{\partial x_1},\frac{\partial U(x_1,x_2)}{\partial x_2}>0$. The third party is able to affect the incentives of the firms. To simplify the problem we assume that the third party intervenes in $\gamma_2$ and that firm $2$ is the disadvantaged firm ($\gamma_1\geq\gamma_2$). The optimal $\gamma_2$ is given by:
 
 \begin{align}
 \frac{\d U(x_1,x_2)}{\d \gamma_2} &= \frac{\partial U(x_1,x_2)}{\partial x_1}\frac{\d x_1}{\d \gamma_2} + \frac{\partial U(x_1,x_2)}{\partial x_2}\frac{\d x_2}{\d \gamma_2}\\
 \frac{\d U(x_1,x_2)}{\d \gamma_2} &= \left(\frac{\partial U(x_1,x_2)}{\partial x_1}\frac{\d x_1}{\d x_2}+ \frac{\partial U(x_1,x_2)}{\partial x_2}\right)\frac{\d x_2}{\d \gamma_2}
 \end{align}
-Where the second line follows from the fact that $\gamma_2$ does not directly impact $x_1$ but only through $x_2$. $\frac{\d x_2}{\d \gamma_2}>0$ so that an increase in firm $2$'s benefit from market share leads to an increase in $x_2$. Thus, we conclude that if $\frac{\d x_1}{\d x_2}>0$ or if $\frac{\d x_1}{\d x_2}<0$, but close to zero, the third party should increase the incentives of firm $2$. Firm $2$ will exert more efforts, while firm $1$ either also increases hers, or only slightly reduces its efforts. In contrast, if $\frac{\d x_1}{\d x_2}\ll0$ and if $\frac{\partial U(x_1,x_2)}{\partial x_1}\gg \frac{\partial U(x_1,x_2)}{\partial x_2}$ the third party should reduce the incentives of firm $2$ such that it reduces its efforts which encourages firm $1$ to increase its efforts. While the total amount of effects does necessarily decrease, firm $1$'s efforts are seen as more important than firm $2$, creating a net benefit.
+The second line follows from the fact that $\gamma_2$ does not directly impact $x_1$ but only through $x_2$. An increase in the incentives of firm $2$ leads to an increase of its efforts such that $\frac{\d x_2}{\d \gamma_2}>0$. 
 
-In the smartphone sector we observe: a small level of loyalty and a medium amount of asymmetry. Thus, supporting the weak firm will raise overall competition leading to a welfare increase. Similar, damaging the profit margin of the leader might lead to an overall increase in the efforts if the change in the number of indifferent customers is sufficiently big.
+Thus, if the reaction function is positive or only slightly negative an increase in the incentives of the weaker firm ($2$) leads to an increase in the total efforts of both firms. Firm $2$ will exert more efforts which in turn will encourage firm $1$ to also increases hers, or only slightly reduces its efforts. 
 
-In contrast the market for cola flavored drinks features a large amount of loyalty, with a moderate amount of asymmetry. Thus, $g'(\theta)<0$ and increasing the incentives of the weaker firm and raising the incentives of the leader causes a decrease in competition and an overall decrease in total efforts. 
+In contrast, if $\frac{\d x_1}{\d x_2}\ll0$ and/or if $\frac{\partial U(x_1,x_2)}{\partial x_1}\gg \frac{\partial U(x_1,x_2)}{\partial x_2}$ the third party should reduce the incentives of firm $2$ such that it reduces its efforts which encourages firm $1$ to increase its efforts. While the total amount of effects does necessarily decrease, firm $1$'s efforts are seen as more important than firm $2$, creating a net benefit. If the effort do not change the firm's profit extraction, the latter case requires that $\frac{1}{\gamma_1}<g'(x_1^C-x_2^C)<0$.
+
+In the smartphone sector we observe: a small level of loyalty and a medium amount of asymmetry. Thus, supporting the weak firm will raise overall competition leading to a welfare increase. Similar, damaging the profit margin of the leader might lead to an overall increase in the efforts if the change in the number of indifferent customers is sufficiently big. Here moving closer to symmetry increases competition intensity.
+
+In contrast, the market for cola-flavored soft-drinks features a large amount of loyalty, with a moderate amount of asymmetry. Thus, $g'(\theta)<0$ and increasing the incentives of the weaker firm or raising the incentives of the leader causes a decrease in competition and an overall decrease in total efforts.
+
+\subsection{Value-Augmenting Efforts}
+If the efforts of the firm also augment its profit extraction from customers, the reaction function becomes:
+\begin{align}
+\frac{\d x_1}{\d x_2} &= A_i^{-1} \left(-g'(x_1^C-x_2^C)\frac{\gamma_1}{c_1} - g(x_1-x_2)\frac{\partial \gamma_1}{\partial x_1}\frac{1}{c_1}\right)\\
+A_i &= 1 - g'(x_1^C-x_2^C)\frac{\gamma_1}{c_1}-g(x_1-x_2)\frac{\partial \gamma_1}{\partial x_1}\frac{1}{c_1}-G(x_1-x_2)\frac{\partial^2 \gamma_1}{\partial^2 x_1}\frac{\gamma}{c_1}
+\end{align}
+
+A sufficiently positive $g'(\theta)$ leads to an decrease in the effort of firm $1$ in response to an increase in the efforts of firm $2$. However, the reaction is now also determined by the changes to the market share. An increase in the efforts of firm $2$ leads to a decrease in the market shares of firm $1$. This lowers it's incentives to use high efforts to extract monetary value from the firms. By encouraging the laggards in the smartphone sector the third party also reduces the market share of the leading firms, who will then invest less in R\&D.
+
+\section{Other aspects}
+\begin{itemize}
+	\item Market shares determine investments. Are returns convex or concave?
+	\item Customers profit from investment. The large firm has more customers. If it invests more, it helps more people. 
+	\item What is the social optimum?
+	\item Switching costs?
+\end{itemize}
+
+ 
 
 \end{document}
