@@ -158,6 +158,26 @@ A_i &= 1 - g'(x_1^C-x_2^C)\frac{\gamma_1}{c_1}-g(x_1-x_2)\frac{\partial \gamma_1
 
 A sufficiently positive $g'(\theta)$ leads to an decrease in the effort of firm $1$ in response to an increase in the efforts of firm $2$. However, the reaction is now also determined by the changes to the market share. An increase in the efforts of firm $2$ leads to a decrease in the market shares of firm $1$. This lowers it's incentives to use high efforts to extract monetary value from the firms. By encouraging the laggards in the smartphone sector the third party also reduces the market share of the leading firms, who will then invest less in R\&D.
 
+\section{Examples}
+\subsection{Basic Case - Uniform Distribution}
+First consider the basic case of a uniform distribution of customers. Thus $g(\theta)\equiv\tilde{g}$ and $g'(\cdot)=0$. The solutions to the firms problem become:
+
+\begin{align}
+x_1^C &= \tilde{g}\frac{\gamma_1}{c_1} + G(x_1-x_2)\frac{\partial \gamma_1}{\partial x_1}\frac{1}{c_1}\\
+x_2^C &= \tilde{g}\frac{\gamma_2}{c_2} + \big(1-G(x_1-x_2)\big)\frac{\partial \gamma_2}{\partial x_2}\frac{1}{c_2}
+\end{align}
+
+The reaction function equals:
+\begin{align*}
+\frac{\d x_1}{\d x_2} &= A_i^{-1} \left( -\tilde{g}\frac{\partial \gamma_1}{\partial x_1}\frac{1}{c_1}\right)\\
+A_i &= 1 -\tilde{g}\frac{\partial \gamma_1}{\partial x_1}\frac{1}{c_1}-G(x_1-x_2)\frac{\partial^2 \gamma_1}{\partial^2 x_1}\frac{\gamma}{c_1}
+\end{align*}
+
+If the efforts don't affect the value extraction of the firms, the optimal efforts of the firms are given by $\tilde{g}\frac{\gamma_i}{c_i}$ and thus proportional to the value and the cost ratio. Furthermore, the efforts are independent of the competitors efforts. 
+
+If the firm also derive value from the efforts then the reaction is always negative. A higher effort by firm $2$ leads to a lower market share of firm $1$, which reduces its incentives to exert efforts. 
+
+
 \section{Other aspects}
 \begin{itemize}
 	\item Market shares determine investments. Are returns convex or concave?
