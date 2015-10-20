@@ -75,15 +75,15 @@ pdftitle={Asymmetric Agents and their Willingness to Fight}]{hyperref}
 \section{Model Set Up}
 Consider the market for smartphones. Two firms compete over customers with heterogeneous preferences. Devices are sold at an exogenously given price such that firm $1$ derives a profit of $\gamma_i$ from each customer
  
-Customer $k$ exhibits a preference for one of the two products given by $\theta_k$. $\theta_k\gg0$ implies that customers $k$ has a strong preference for the device sold by firm $2$, $\theta_k\ll0$ that she has a strong preference for product $1$ and $\theta_k\approxeq 0$ that she is indifferent between the firms. Preferences of the customers are exogenously determined and distributed according to the CDF $G(\cdot)$ and the PDF $g(\cdot)$. without atoms and $g$ is continuously differentiable
+Customer $k$ exhibits a preference for one of the two products given by $\theta_k$. $\theta_k\gg0$ implies that customers $k$ has a strong preference for the device sold by firm $2$, $\theta_k\ll0$ that she has a strong preference for product $1$ and $\theta_k\approxeq 0$ that she is indifferent between the firms. Preferences of the customers are exogenously determined and distributed according to the CDF $G(\cdot)$ and the PDF $g(\cdot)$. $G(\cdot)$ is assumed twice continuously differentiable such that $g(\cdot)$ is continuously differentiable and the distribution lacks atoms. 
 
 Preferences are taken as exogenously given. They are either derived from a non-marketable unique characteristic of the products (some people dislike the sharp edges of the device, others love it), or they are derived from previous interactions with the firm. This can be used as the starting point for a dynamic model, but more about this later.
 
-Firms compete in R\&D efforts to increase the quality of their own products. A higher quality level helps to gain customers from the competitors. It can also help to increase the revenue per customer. People are willing to pay a certain amount for a smartphone, and the quality might have a strong impact on their decision which device to buy, while there willingness to pay could remain unchanged ($\frac{\partial \gamma_i}{\partial x_i}=0$) it will often increase ($\frac{\partial \gamma_i}{\partial x_i}=0$).$>0$?
+Firms compete in R\&D efforts to increase the quality of their own products. A higher quality level helps to gain customers from the competitors. It can also help to increase the revenue per customer. People are willing to pay a certain amount for a smartphone, and the quality might have a strong impact on their decision which device to buy, while there willingness to pay could remain unchanged ($\frac{\partial \gamma_i}{\partial x_i}=0$) it will often increase ($\frac{\partial \gamma_i}{\partial x_i}>0$).
 
 An alternative way is to let firms compete in marketing efforts. Marketing can either illustrate the positive characteristics of their device such that the customers' willingness to pay also increases with efforts, or it can illustrates drawbacks of the competing product such that the customers' willingness to pay remains unchanged.
 
-Customer $k$ compares the utility derived from both choices and purchases product $2$ if and only if the difference in quality overcompensates for her own loyalty. For simplicity ties between both choices are ignored has measure 0. Thus customer $k$ purchases $2$ iff:
+Customer $k$ compares the utility derived from both choices and purchases product $2$ if and only if the difference in quality overcompensates for her own loyalty. The distribution has no atoms, such that ties occur with measure $0$. Thus customer $k$ purchases $2$ if and only if:
 $\theta_k\geq x_1-x_2$.
 
 If firm $1$ provides a product superior to its competitor's, only customers highly loyal to firm $2$ will continue to purchase its devices. Thus, the demand for firm $1$ is given by:
@@ -106,7 +106,20 @@ x_2^C &= g(x_1^C-x_2^C)\frac{\gamma_2}{c_2} + \big(1-G(x_1-x_2)\big)\frac{\parti
 \end{align}
 As long as $g(\cdot)>0$, efforts are non-zero. If the return per customer is independent of the efforts, we can normalize the effort costs to $1$ without loss of generality. Depending on the shape of $G(\cdot)$ the game might have multiple equilibria. To avoid having to assume uniqueness the following discussion focuses only on local changes. 
 
-Efforts either increase the return per customers or leave it unchanged such that $\gamma_1'(\cdot)\geq 0$. Additionally, $\gamma_1''(\cdot) - c_1<0$. This implies that efforts don't decrease the valuation of the product and that in lieu ?without? of competition the optimal level of efforts is finite.
+Efforts either increase the return per customers or leave it unchanged such that $\gamma_1'(\cdot)\geq 0$. Additionally, $\gamma_1''(\cdot) - c_1<0$. This implies that efforts don't decrease the valuation of the product and that without of competition the optimal level of efforts is finite.
+
+\subsection{Special Case: Per Customer Revenue independent of Efforts}
+
+The reaction function of firm $i$ to a change in the efforts of firm $j$ is:
+\begin{align}
+\frac{\d x_1^C}{\d x_2} &= g'(x_1^C-x_2^C)\frac{\gamma_1}{c_1}\left(\frac{\d x_1^C}{\d x_2}-1\right)\\
+\frac{\d x_1^C}{\d x_2} &= \frac{-g'(x_1^C-x_2^C)\frac{\gamma_1}{c_1}}{1-g'(x_1^C-x_2^C)\frac{\gamma_1}{c_1}}
+\end{align}
+In this case the costs can be normalized to $1$ by setting the revenue per customer to $\frac{\gamma_1}{c_1}$. If $g'(x_1^C-x_2^C)\gamma_1 > 1$ the market cannot be in equilibrium as the second order condition for the optimal efforts of firm $1$  implies that the optimal efforts are not a maximum.
+
+If $-\frac{1}{\gamma_1}<g'(x_1^C-x_2^C)<0$ this expression is positive, such that an increase in $x_2$ leads to an increase in $x_1$ and thus an overall escalation. The increase in $x_2$ increases the number of indifferent customers, such that competition becomes more intense. If $g'(x_1^C-x_2^C)>0$ this expression is negative and an increase in $x_2$ leads to crowding out of $x_1$. 
+
+Returning to the example of the smartphone sector, we consider a distribution that satisfies $-\frac{1}{\gamma_1}<g'(\theta)<\frac{1}{\gamma_1}$ for all $\theta$.\marginpar{I need to address symmetry earlier in the text.} Additionally, most customers are centered in the middle with only few highly loyal customers. This can be described by $g'(0)=0$ and $g'(\theta)<0, \theta>0; g'(\theta)<0, \theta<0$. Most customer are willing to switch to the superior product, while a small number has some inherent preference for one.
 
 \subsection{General Case}
 The reaction function of firm $1$ to a change in the efforts of firm $2$ is given by:
@@ -115,21 +128,7 @@ The reaction function of firm $1$ to a change in the efforts of firm $2$ is give
 \frac{\d x_1}{\d x_2} &= A_i^{-1} \left(-g'(x_1^C-x_2^C)\frac{\gamma_1}{c_1} - g(x_1-x_2)\frac{\partial \gamma_1}{\partial x_1}\frac{1}{c_1}\right)\\
 A_i &= 1 - g'(x_1^C-x_2^C)\frac{\gamma_1}{c_1}-g(x_1-x_2)\frac{\partial \gamma_1}{\partial x_1}\frac{1}{c_1}-G(x_1-x_2)\frac{\partial^2 \gamma_1}{\partial^2 x_1}\frac{\gamma}{c_1}
 \end{align}
-Assuming that $A_i>0$ and that $\frac{\partial \gamma_1}{\partial x_1}>0$, we find that the sign of the reaction function depends on $g'(\cdot)$. The reaction is positive if $g'(\cdot)$ is sufficiently negative ?but that also affects the sign of $A_i$?. Then the level of competition ?measured how? increase sufficiently to raise the incentives to compete more intensively. If $g'(\cdot)$ is close to zero, competition intensity does still increase, but is offset by the lower market share. A lower market share makes extracting profits from the customers less valuable, thus making $\frac{\partial \gamma_i}{\partial x_i}$ less important. Thus, for small negative and large positive $g'(\cdot)$ and increase in $x_2$ leads to lower competition and a lower effort by $1$. 
-
-\subsection{Without positive effect on revenue}
-?do this subsection first: easier for the reader?
-
-The reaction function of firm $i$ to a change in the efforts of firm $j$ is:
-\begin{align}
-\frac{\d x_1^C}{\d x_2} &= g'(x_1^C-x_2^C)\gamma_1\left(\frac{\d x_1^C}{\d x_2}-1\right)\\
-\frac{\d x_1^C}{\d x_2} &= \frac{-g'(x_1^C-x_2^C)\gamma_1}{1+g'(x_1^C-x_2^C)\gamma_1}
-\end{align}
-If $g'(x_1^C-x_2^C)\gamma_1<-1$ the market cannot be in equilibrium as an increase in $x_1$ would lead to an even greater increase in $x_1$ already by itself. ?effect of $x_1$ on $x_1$ follows from $dx_1/dx_2$?
-
-If $-\frac{1}{\gamma_1}<g'(x_1^C-x_2^C)<0$ this expression is positive, such that an increase in $x_2$ leads to an increase in $x_1$ and thus an overall escalation. The increase in $x_2$ increases the number of indifferent customers, such that competition becomes more intense. If $g'(x_1^C-x_2^C)>0$ this expression is negative and an increase in $x_2$ leads to crowding out of $x_1$. 
-
-Returning to the example of the smartphone sector, we consider a distribution that satisfies $-\frac{1}{\gamma_1}<g'(\theta)<\frac{1}{\gamma_1}$ for all $\theta$.\marginpar{I need to address symmetry earlier in the text.} Additionally, most customers are centered in the middle with only few highly loyal customers. This can be described by $g'(0)=0$ and $g'(\theta)<0, \theta>0; g'(\theta)<0, \theta<0$. Most customer are willing to switch to the superior product, while a small number has some inherent preference for one.
+Assuming that $A_i>0$ and that $\frac{\partial \gamma_1}{\partial x_1}>0$, we find that the sign of the reaction function depends on $g'(\cdot)$. The reaction is positive if $g'(\cdot)$ is sufficiently negative. In this case also $A_i>0$. Then the competition intensity described by $g(\theta^*)$ increases sufficiently to raise the incentives to compete more intensively. If $g'(\cdot)$ is close to zero, competition intensity does still increase, but is offset by the lower market share. A lower market share makes extracting profits from the customers less valuable, thus making $\frac{\partial \gamma_i}{\partial x_i}$ less important. Thus, for small negative and large positive $g'(\cdot)$ and increase in $x_2$ leads to lower competition and a lower effort by $1$. %address the sign of A_i better.
 
 \section{Third Party}
 
@@ -147,7 +146,7 @@ In contrast, if $\frac{\d x_1}{\d x_2}\ll0$ and/or if $\frac{\partial U(x_1,x_2)
 
 In the smartphone sector we observe: a small level of loyalty and a medium amount of asymmetry. Thus, supporting the weak firm will raise overall competition leading to a welfare increase. Similar, damaging the profit margin of the leader might lead to an overall increase in the efforts if the change in the number of indifferent customers is sufficiently big. Here moving closer to symmetry increases competition intensity.
 
-In contrast, the market for cola-flavored soft-drinks features a large amount of loyalty, with a moderate amount of asymmetry. Thus, $g'(\theta)<0$ and increasing the incentives of the weaker firm or raising the incentives of the leader causes a decrease in competition and an overall decrease in total efforts. but $g'(\theta) > 0$ for a U-shape with 2 the disadvantaged firm?
+In contrast, the market for cola-flavored soft-drinks features a large amount of loyalty, with a moderate amount of asymmetry. Thus, $g'(\theta)>0$ and increasing the incentives of the weaker firm or reducing the incentives of the leader causes a decrease in competition and an overall decrease in total efforts.
 
 \subsection{Value-Augmenting Efforts}
 If the efforts of the firm also augment its profit extraction from customers, the reaction function becomes:
