@@ -124,9 +124,9 @@ Returning to the example of the smartphone sector, we consider a distribution th
 \subsection{General Case}
 The reaction function of firm $1$ to a change in the efforts of firm $2$ is given by:
 \begin{align}
-\frac{\d x_1}{\d x_2} &= g'(x_1^C-x_2^C)\left(\frac{\d x_1}{\d x_2}-1\right)\frac{\gamma_1}{c_1} + g(x_1-x_2)\left(\frac{\d x_1}{\d x_2}-1\right)\frac{\partial \gamma_1}{\partial x_1}\frac{1}{c_1} + G(x_1-x_2)\frac{\partial^2 \gamma_1}{\partial^2 x_1}\frac{\d x_1}{\d x_2}\frac{\gamma}{c_1}\\
+\frac{\d x_1}{\d x_2} &= g'(x_1^C-x_2^C)\left(\frac{\d x_1}{\d x_2}-1\right)\frac{\gamma_1}{c_1} + g(x_1-x_2)\left(\frac{\d x_1}{\d x_2}-1\right)\frac{\partial \gamma_1}{\partial x_1}\frac{1}{c_1} + G(x_1-x_2)\frac{\partial^2 \gamma_1}{\partial^2 x_1}\frac{\d x_1}{\d x_2}\frac{1}{c_1}\\
 \frac{\d x_1}{\d x_2} &= A_i^{-1} \left(-g'(x_1^C-x_2^C)\frac{\gamma_1}{c_1} - g(x_1-x_2)\frac{\partial \gamma_1}{\partial x_1}\frac{1}{c_1}\right)\\
-A_i &= 1 - g'(x_1^C-x_2^C)\frac{\gamma_1}{c_1}-g(x_1-x_2)\frac{\partial \gamma_1}{\partial x_1}\frac{1}{c_1}-G(x_1-x_2)\frac{\partial^2 \gamma_1}{\partial^2 x_1}\frac{\gamma}{c_1}
+A_i &= 1 - g'(x_1^C-x_2^C)\frac{\gamma_1}{c_1}-g(x_1-x_2)\frac{\partial \gamma_1}{\partial x_1}\frac{1}{c_1}-G(x_1-x_2)\frac{\partial^2 \gamma_1}{\partial^2 x_1}\frac{1}{c_1}
 \end{align}
 Assuming that $A_i>0$ and that $\frac{\partial \gamma_1}{\partial x_1}>0$, we find that the sign of the reaction function depends on $g'(\cdot)$. The reaction is positive if $g'(\cdot)$ is sufficiently negative. In this case also $A_i>0$. Then the competition intensity described by $g(\theta^*)$ increases sufficiently to raise the incentives to compete more intensively. If $g'(\cdot)$ is close to zero, competition intensity does still increase, but is offset by the lower market share. A lower market share makes extracting profits from the customers less valuable, thus making $\frac{\partial \gamma_i}{\partial x_i}$ less important. Thus, for small negative and large positive $g'(\cdot)$ and increase in $x_2$ leads to lower competition and a lower effort by $1$. %address the sign of A_i better.
 
@@ -152,30 +152,35 @@ In contrast, the market for cola-flavored soft-drinks features a large amount of
 If the efforts of the firm also augment its profit extraction from customers, the reaction function becomes:
 \begin{align}
 \frac{\d x_1}{\d x_2} &= A_i^{-1} \left(-g'(x_1^C-x_2^C)\frac{\gamma_1}{c_1} - g(x_1-x_2)\frac{\partial \gamma_1}{\partial x_1}\frac{1}{c_1}\right)\\
-A_i &= 1 - g'(x_1^C-x_2^C)\frac{\gamma_1}{c_1}-g(x_1-x_2)\frac{\partial \gamma_1}{\partial x_1}\frac{1}{c_1}-G(x_1-x_2)\frac{\partial^2 \gamma_1}{\partial^2 x_1}\frac{\gamma}{c_1}
+A_i &= 1 - g'(x_1^C-x_2^C)\frac{\gamma_1}{c_1}-g(x_1-x_2)\frac{\partial \gamma_1}{\partial x_1}\frac{1}{c_1}-G(x_1-x_2)\frac{\partial^2 \gamma_1}{\partial^2 x_1}\frac{1}{c_1}
 \end{align}
 
 A sufficiently positive $g'(\theta)$ leads to an decrease in the effort of firm $1$ in response to an increase in the efforts of firm $2$. However, the reaction is now also determined by the changes to the market share. An increase in the efforts of firm $2$ leads to a decrease in the market shares of firm $1$. This lowers it's incentives to use high efforts to extract monetary value from the firms. By encouraging the laggards in the smartphone sector the third party also reduces the market share of the leading firms, who will then invest less in R\&D.
 
 \section{Examples}
 \subsection{Basic Case - Uniform Distribution}
-First consider the basic case of a uniform distribution of customers. Thus $g(\theta)\equiv\tilde{g}$ and $g'(\cdot)=0$. The solutions to the firms problem become:
-
+First, consider the basic case of a uniform distribution of customers. Thus $g(\theta)\equiv\tilde{g}$ and $g'(\cdot)=0$. The solutions to the firms problem becomes:
 \begin{align}
+\begin{split}
 x_1^C &= \tilde{g}\frac{\gamma_1}{c_1} + G(x_1-x_2)\frac{\partial \gamma_1}{\partial x_1}\frac{1}{c_1}\\
 x_2^C &= \tilde{g}\frac{\gamma_2}{c_2} + \big(1-G(x_1-x_2)\big)\frac{\partial \gamma_2}{\partial x_2}\frac{1}{c_2}
+\end{split}
 \end{align}
-
-The reaction function equals:
+The reaction function is given by:
 \begin{align*}
 \frac{\d x_1}{\d x_2} &= A_i^{-1} \left( -\tilde{g}\frac{\partial \gamma_1}{\partial x_1}\frac{1}{c_1}\right)\\
-A_i &= 1 -\tilde{g}\frac{\partial \gamma_1}{\partial x_1}\frac{1}{c_1}-G(x_1-x_2)\frac{\partial^2 \gamma_1}{\partial^2 x_1}\frac{\gamma}{c_1}
+A_i &= 1 -\tilde{g}\frac{\partial \gamma_1}{\partial x_1}\frac{1}{c_1}-G(x_1-x_2)\frac{\partial^2 \gamma_1}{\partial^2 x_1}\frac{1}{c_1}
 \end{align*}
+If the efforts do not affect the value extraction of the firms, the optimal efforts of the firms are given by $\tilde{g}\frac{\gamma_i}{c_i}$ and thus proportional to the value and the cost ratio. Most importantly, the efforts are independent of the competitors efforts. Firms compete for market shares, but their optimal decision are independent of the other firms decision.
 
-If the efforts don't affect the value extraction of the firms, the optimal efforts of the firms are given by $\tilde{g}\frac{\gamma_i}{c_i}$ and thus proportional to the value and the cost ratio. Furthermore, the efforts are independent of the competitors efforts. 
+If the firm also derive value from the efforts, the reaction is always negative. A higher effort by firm $2$ leads to a lower market share of firm $1$, which reduces its incentives to exert efforts. Market share is the dominant motivator to perform product improvement and a smaller one leads to less incentives to innovate. 
 
-If the firm also derive value from the efforts then the reaction is always negative. A higher effort by firm $2$ leads to a lower market share of firm $1$, which reduces its incentives to exert efforts. 
-
+Can the increase of firm $2$'s efforts in this case lead to an increase of total efforts? This would require that $\frac{\d x_1}{\d x_2} >-1$.
+\begin{align*}
+-1<\frac{\d x_1}{\d x_2}&\leq0\\
+0\leq\tilde{g}\frac{\partial \gamma_1}{\partial x_1}\frac{1}{c_1}&<1 -\tilde{g}\frac{\partial \gamma_1}{\partial x_1}\frac{1}{c_1}-G(x_1-x_2)\frac{\partial^2 \gamma_1}{\partial^2 x_1}\frac{1}{c_1}
+\end{align*}
+Thus, total efforts only increase if the affect of $x_1$ on the value extraction is very small. If $\frac{\partial \gamma_1}{\partial x_1}=0$ it holds as the efforts are independent of the market share. However, if the efforts are very important in extracting value from the customers an increase in the efforts of any party leads to a decrease in the total efforts in the market.
 
 \section{Other aspects}
 \begin{itemize}
