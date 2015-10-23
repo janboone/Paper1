@@ -66,20 +66,20 @@ pdftitle={Asymmetric Agents and their Willingness to Fight}]{hyperref}
 
 \author{Clemens Fiedler}
 \title{Asymmetric Agents and their Willingness to Fight\\
-	Customer Loyalty and its Impact on Competition}
+	{\Large Customer Loyalty and its Impact on Competition}}
 
 \begin{document}
 	
 \maketitle
 
 \section{Model Set Up}
-Consider the market for smartphones. Two firms compete over customers with heterogeneous preferences. Devices are sold at an exogenously given price such that firm $1$ derives a profit of $\gamma_i$ from each customer
+Consider the market for smartphones. Two firms $i\in\{1,2\}$ compete over customers with heterogeneous preferences. Devices are sold at an exogenously given price such that firm $i$ derives a profit of $\gamma_i$ from each customer
  
-Customer $k$ exhibits a preference for one of the two products given by $\theta_k$. $\theta_k\gg0$ implies that customers $k$ has a strong preference for the device sold by firm $2$, $\theta_k\ll0$ that she has a strong preference for product $1$ and $\theta_k\approxeq 0$ that she is indifferent between the firms. Preferences of the customers are exogenously determined and distributed according to the CDF $G(\cdot)$ and the PDF $g(\cdot)$. $G(\cdot)$ is assumed twice continuously differentiable such that $g(\cdot)$ is continuously differentiable and the distribution lacks atoms. 
+The demand side is given by a number of customers with unit mass and a heterogeneous level of loyalty towards one of the brands. Customer $k$ exhibits a preference for one of the two products given by $\theta_k$. $\theta_k\gg0$ implies that customers $k$ has a strong preference for the device sold by firm $2$, $\theta_k\ll0$ that she has a strong preference for product $1$ and $\theta_k= 0$ that she is indifferent between the firms. Preferences of the customers are exogenously determined and distributed according to the cdf $G(\cdot)$ and the pdf $g(\cdot)$. $G(\cdot)$ is assumed twice continuously differentiable such that $g(\cdot)$ is continuously differentiable and the distribution lacks atoms. 
 
 Preferences are taken as exogenously given. They are either derived from a non-marketable unique characteristic of the products (some people dislike the sharp edges of the device, others love it), or they are derived from previous interactions with the firm. This can be used as the starting point for a dynamic model, but more about this later.
 
-Firms compete in R\&D efforts to increase the quality of their own products. A higher quality level helps to gain customers from the competitors. It can also help to increase the revenue per customer. People are willing to pay a certain amount for a smartphone, and the quality might have a strong impact on their decision which device to buy, while there willingness to pay could remain unchanged ($\frac{\partial \gamma_i}{\partial x_i}=0$) it will often increase ($\frac{\partial \gamma_i}{\partial x_i}>0$).
+Firms compete in R\&D efforts to increase the quality of their own products. A higher quality level helps to gain customers from the competitors. It can also help to increase the revenue per customer. People are willing to pay a certain amount for a smartphone, and the quality might have a strong impact on their decision which device to buy, while their willingness to pay could remain unchanged ($\frac{\partial \gamma_i}{\partial x_i}=0$) it will often increase ($\frac{\partial \gamma_i}{\partial x_i}>0$).
 
 An alternative way is to let firms compete in marketing efforts. Marketing can either illustrate the positive characteristics of their device such that the customers' willingness to pay also increases with efforts, or it can illustrates drawbacks of the competing product such that the customers' willingness to pay remains unchanged.
 
@@ -99,16 +99,19 @@ G(x_1-x_2)\gamma_1 - c_1x_1^2/2\\
 
 \section{Optimal Firm Behavior}
 
-The optimal effort level for both firms is:
+The optimal effort level for both firms and the indifferent customer are:
 \begin{align}
+\begin{split}
 x_1^C &= g(x_1^C-x_2^C)\frac{\gamma_1}{c_1} + G(x_1-x_2)\frac{\partial \gamma_1}{\partial x_1}\frac{1}{c_1}\\
 x_2^C &= g(x_1^C-x_2^C)\frac{\gamma_2}{c_2} + \big(1-G(x_1-x_2)\big)\frac{\partial \gamma_2}{\partial x_2}\frac{1}{c_2}
+\end{split}\\
+\theta^* &=  g(x_1^C-x_2^C)\left(\frac{\gamma_1}{c_1}-\frac{\gamma_2}{c_2}\right) + G(x_1-x_2)\frac{\partial \gamma_1}{\partial x_1}\frac{1}{c_1} - \big(1-G(x_1-x_2)\big)\frac{\partial \gamma_2}{\partial x_2}\frac{1}{c_2}
 \end{align}
 As long as $g(\cdot)>0$, efforts are non-zero. If the return per customer is independent of the efforts, we can normalize the effort costs to $1$ without loss of generality. Depending on the shape of $G(\cdot)$ the game might have multiple equilibria. To avoid having to assume uniqueness the following discussion focuses only on local changes. 
 
-Efforts either increase the return per customers or leave it unchanged such that $\gamma_1'(\cdot)\geq 0$. Additionally, $\gamma_1''(\cdot) - c_1<0$. This implies that efforts don't decrease the valuation of the product and that without of competition the optimal level of efforts is finite.
+Efforts either increase the return per customers or leave it unchanged such that $\gamma_1'(\cdot)\geq 0$. Additionally, $\gamma_1''(\cdot) - c_1<0$. Efforts do not decrease the valuation of the product but the return is either concave or not too convex such that even without competition the optimal effort level would be finite.
 
-\subsection{Special Case: Per Customer Revenue independent of Efforts}
+\subsection{Special Case: Per Customer Revenue Independent of Efforts}
 
 The reaction function of firm $i$ to a change in the efforts of firm $j$ is:
 \begin{align}
@@ -183,7 +186,7 @@ Can the increase of firm $2$'s efforts in this case lead to an increase of total
 Thus, total efforts only increase if the affect of $x_1$ on the value extraction is very small. If $\frac{\partial \gamma_1}{\partial x_1}=0$ it holds as the efforts are independent of the market share. However, if the efforts are very important in extracting value from the customers an increase in the efforts of any party leads to a decrease in the total efforts in the market.
 
 \subsection{Loyalty}
-No consider the case of both firms having a loyal customer base such that $g'(\theta)>0$ to the right of the center. Firm $2$ is the disadvantaged firm, with $x_2<x_1$. This can be due to a difference in costs or value extraction. The reaction function is:
+No consider the case of both firms having a loyal customer base such that $g'(\theta)>0$ to the right of the center.  Firm $2$ is the disadvantaged firm, with $x_2<x_1$. This can be due to a difference in costs or value extraction. The reaction function is:
 
 \begin{align}
 \frac{\d x_1}{\d x_2} &= A_i^{-1} \underbrace{\left(-g'(x_1^C-x_2^C)\frac{\gamma_1}{c_1}\right.}_{>0} - \left.g(x_1-x_2)\frac{\partial \gamma_1}{\partial x_1}\frac{1}{c_1}\right)\\
@@ -191,8 +194,20 @@ A_i &= 1 - g'(x_1^C-x_2^C)\frac{\gamma_1}{c_1}-g(x_1-x_2)\frac{\partial \gamma_1
 \end{align}
 Thus, the sign of the reaction of firm $1$ depends on the relative expression of the changes in competition. If the intensity of competition increases significantly in response to a reduction of firm $2$'s efforts, firm $1$ will raise its efforts. Similarly, if the value extraction is fixed, an increase in the efforts of firm $1$ will raise firm $2$'s incentive to exert efforts. Paradoxically, supporting the market leader raises the efforts of the laggard, and raising the efforts of the laggards, reduces the efforts of the market leader. This is precisely the opposite of what we expect. 
 
-This effect is affected by the changes to the value extraction. In general the firm that gains an advantage has a higher incentives to raise its efforts and the losing firm gains incentives to lower its efforts. This can partially offset the result in the previous paragraph.
+The strength of the effect depends on the changes to the value extraction. In general the firm that gains an advantage has a higher incentives to raise its efforts and the losing firm gains incentives to lower its efforts. This can partially offset the result in the previous paragraph.
 
+\subsection{Comparision}
+
+If customer loyalty is missing from the model, the only channel through which the efforts of the firms interact is the value extraction. If firm $2$ expands its market share at the expenses of firm $1$, firm $2$ has an additional incentive to have higher efforts and firm $1$ to reduce its efforts. This fact does not depend on the market shares, so supporting the weak firm always reduces the efforts of the leader.
+
+The effect of total efforts depends on the relative size and the shape of the value extraction function. If the value extraction rate is concave, a higher level of total efforts can be achieved with more symmetric efforts. (intuitively yes, but formal proof necessary).
+
+In comparison, the model with customer loyalty features an additional channel. Any change to the efforts leads to a change in the number of critical customers, thus effecting the intensity of competition. A slight level of asymmetry implies that firms are competing over the home market of firm $2$, and have a high incentive to compete heavily. 
+
+\section{A small outlook to dynamics}
+This is not meant to be part of the paper, but maybe it is interesting. Consider for a small though experiment that some dynamics are at work. More precisely, a customer that buys from one firm, will become more likely to do so over time. Mathematically, for $\theta<\theta^*$ $F_{t+1}(\theta)>F_t(\theta)$ and for $\theta>\theta^*$ $F_{t+1}(\theta)<F_t(\theta)$.
+
+In the next period, both firms exert less efforts as $g(\theta^*)$ goes down. However, the stronger firm ($1$) reacts more strongly to this, shifting market shares to firm $2$. Ironically, the market shares become more equal. It is important to note, that this builds on myopic firms.  
 \section{Other aspects}
 \begin{itemize}
 	\item Market shares determine investments. Are returns convex or concave?
