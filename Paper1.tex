@@ -105,6 +105,9 @@ x_2^C &= g(x_1^C-x_2^C)\frac{\gamma_2}{c_2} + \big(1-G(x_1-x_2)\big)\frac{\parti
 \begin{align}
 \theta^* &=  g(x_1^C-x_2^C)\left(\frac{\gamma_1}{c_1}-\frac{\gamma_2}{c_2}\right) + G(x_1-x_2)\frac{\partial \gamma_1}{\partial x_1}\frac{1}{c_1} - \big(1-G(x_1-x_2)\big)\frac{\partial \gamma_2}{\partial x_2}\frac{1}{c_2}
 \end{align}
+
+\marginpar{I am not sure I understand the third equation; how does this relate to $\theta^{*} = x_1 - x_2$???; what does the superscript $C$ mean?}
+
 As long as $g(\cdot)>0$, efforts are non-zero. For simplicity we normalize the costs of effort provision to $1$ without loss of generality, for both firms, by defining: $\gamma_i(x_i)\equiv \gamma_i(x_i)/c_i$. Depending on the shape of $G(\cdot)$ the game might feature multiple equilibria. To avoid having to assume uniqueness the following discussion focuses only on local changes. 
 
 Efforts either increase the return per customers or leave it unchanged such that $\gamma_i'(x_i)\geq 0$. Additionally, the return per customer of sufficiently concave such that $\gamma_i''(x_i) - 1<0$. The return is either concave or not too convex such that even without competition the optimal effort level would be finite.\footnote{For simplicity this is assumed to be the case globaly.}
@@ -118,9 +121,9 @@ The reaction function of firm $1$ to a change in the efforts of firm $2$ is:
 \end{align}
 If $g'(x_1^C-x_2^C)\gamma_1 > 1$, the market cannot be in equilibrium as the second order condition for the optimal efforts of firm $1$ implies that the efforts are not at a maximum. Consequently, the denominator in equation \ref{eqn:reactionSpecialCase} is positive. 
 
-If $-\frac{1}{\gamma_1}<g'(x_1^C-x_2^C)<0$ this expression is positive, such that an increase in $x_2$ leads to an increase in $x_1$ and thus an overall escalation. The increase in $x_2$ raises the number of indifferent customers, such that competition becomes more intense. If $g'(x_1^C-x_2^C)>0$ this expression is negative and an increase in $x_2$ leads to crowding out of $x_1$. \marginpar{add a sketch here}
+If $-\frac{1}{\gamma_1}<g'(x_1^C-x_2^C)<0$ this expression is positive, such that an increase in $x_2$ leads to an increase in $x_1$ and thus an overall escalation. The increase in $x_2$ raises the number of indifferent customers, such that competition becomes more intense.\marginpar{explicitly say what your definition of competition intensity is: $dx_1/dx_2 >0$? or $d(x_{1}+x_2)/dx_2>0$ or increase in number of indifferent consumers? In the latter case, it should be something like marginal over infra-marginal?} If $g'(x_1^C-x_2^C)>0$ this expression is negative and an increase in $x_2$ leads to crowding out of $x_1$. \marginpar{add a sketch here}
 
-Returning to the example of the smartphone sector, we consider a distribution that satisfies $-\frac{1}{\gamma_1}<g'(\theta)<\frac{1}{\gamma_2}$\footnote{This assures us that the second order condition is satisfied for both firms.} for all $\theta$.\marginpar{I need to address symmetry earlier in the text.} Additionally, most customers are centered in the middle with only a few highly loyal customers. This can be described by $g'(0)=0$ and $g'(\theta)<0~\forall \theta>0$ and $g'(\theta)<0~\forall \theta<0$. Most customer are willing to switch to the superior product, but a small number has some inherent preference for one.
+Returning to the example of the smartphone sector, we consider a distribution that satisfies $-\frac{1}{\gamma_1}<g'(\theta)<\frac{1}{\gamma_2}$\footnote{This assures us that the second order condition is satisfied for both firms.} for all $\theta$.\marginpar{I need to address symmetry earlier in the text.} Additionally, most customers are centered in the middle with only a few highly loyal customers. This can be described by $g'(0)=0$ and $g'(\theta)<0~\forall \theta>0$ and $g'(\theta)<0~\forall \theta<0$. Most customer are willing to switch to the superior product, but a small number has some inherent preference for one.\marginpar{both $g'<0$?}
 
 \subsection{General Case}
 Now, we analyze the more general case with $\frac{\partial \gamma_1}{\partial x_1}\geq 0$. The reaction function of firm $1$ to a change in the efforts of firm $2$ is given by:
@@ -128,10 +131,12 @@ Now, we analyze the more general case with $\frac{\partial \gamma_1}{\partial x_
 \frac{\d x_1}{\d x_2} &= g'(\theta^*)\left(\tfrac{\d x_1}{\d x_2}-1\right)\gamma_1 + g(\theta^*)\left(2\tfrac{\d x_1}{\d x_2}-1\right)\tfrac{\partial \gamma_1}{\partial x_1} + G(\theta^*)\tfrac{\partial^2 \gamma_1}{\partial^2 x_1}\tfrac{\d x_1}{\d x_2}\nonumber\\
 \frac{\d x_1}{\d x_2} &= A_i^{-1} \left(-g'(\theta^*)\gamma_1- g(\theta^*)\frac{\partial \gamma_1}{\partial x_1}\right)\\
 A_i &= 1 - g'(\theta^*)c_1-2g(\theta^*)\frac{\partial \gamma_1}{\partial x_1}-G(\theta^*)\frac{\partial^2 \gamma_1}{\partial^2 x_1}
-\end{align}
+\end{align} \marginpar{why subscript $i$? $A_1$?}
 Similar to before, the second order condition implies that $A_i>0$ and by assumption $\frac{\partial \gamma_1}{\partial x_1}>0$. The sign of the reaction function depends on $g'(\cdot)$ and $g(\cdot)$, and $\frac{\partial \gamma_1}{\partial x_1}$ and $\gamma_i$. In fact the reaction depends on the change to the return of the indifferent customer. The reaction is positive if $\frac{\partial}{\partial x_1} g(\theta^*)\gamma_1<0$. The competition intensity described by $g(\theta^*)$ increases sufficiently to raise the incentives to compete more intensively. If $g'(\cdot)$ is close to zero, competition intensity does still increase, but is offset by the lower market share. A lower market share makes extracting profits from the customers less valuable, thus making $\frac{\partial \gamma_i}{\partial x_i}$ less important. Thus, for $\frac{\partial}{\partial x_1} g(\theta^*)\gamma_1>0$ and increase in $x_2$ leads to lower competition and a lower effort by $1$.
 
 The interpretation is not straightforward. If $\frac{\partial}{\partial x_1} g(\theta^*)\gamma_1<0$, an increase of the efforts of firm $1$ would lead to a decrease of the revenue extracted from the indifferent customers. This means that firm $1$ has a natural tendency to reduce its efforts and a negative shock will lead to a reduction of its efforts. \marginpar{\footnotesize doesn't quite fit, need to think about this more.}
+
+\marginpar{I would say: two reasons to raise $x1$: higher market share ($g$) and higher margin over existing market share. Relevant effect: how does $x_2$ affect these two margins?}
 
 \section{Third Party}
 
@@ -145,9 +150,11 @@ The second line follows from the fact that $\gamma_2$ does not directly impact $
 
 Thus, if the reaction function is positive or only slightly negative an increase in the incentives of the weaker firm ($2$) leads to an increase in the total efforts of both firms. Firm $2$ will exert more efforts which in turn will encourage firm $1$ to also increases, or only slightly reduces its efforts. 
 
-In contrast, if $\frac{\d x_1}{\d x_2}\ll0$ and/or if $\frac{\partial U(x_1,x_2)}{\partial x_1}\gg \frac{\partial U(x_1,x_2)}{\partial x_2}$ the third party should reduce the incentives of firm $2$ to reduces its efforts and encourage firm $1$ to increase its efforts. While the total amount of effects does necessarily decrease, firm $1$'s efforts are seen as more important than firm $2$, creating a net benefit. If the effort do not change the firm's profit extraction, the latter case requires that $\frac{1}{\gamma_1}<g'(\theta^*)<0$.
+In contrast, if $\frac{\d x_1}{\d x_2}\ll0$ and/or if $\frac{\partial U(x_1,x_2)}{\partial x_1}\gg \frac{\partial U(x_1,x_2)}{\partial x_2}$ ???and $dx_1/dx_2<0$??? the third party should reduce the incentives of firm $2$ to reduces its efforts and encourage firm $1$ to increase its efforts. While the total amount of effects does necessarily decrease, firm $1$'s efforts are seen as more important than firm $2$, creating a net benefit. If the effort do not change the firm's profit extraction, the latter case requires that $\frac{1}{\gamma_1}<g'(\theta^*)<0$.
 
-In the smartphone sector we observe: a small level of loyalty and a medium amount of asymmetry. Thus, supporting the weak firm will raise overall competition leading to a welfare increase. Similar, damaging the profit margin of the leader might lead to an overall increase in the efforts if the change in the number of indifferent customers is sufficiently big. Here moving closer to symmetry increases competition intensity.
+In the smartphone sector ???does $x$ affect $\gamma$??? we observe: a small level of loyalty and a medium amount of asymmetry. Thus, supporting the weak firm will raise overall competition ???using which definition? same as above??? leading to a welfare increase. Similar, damaging the profit margin of the leader ???but $\gamma_{2}\leq \gamma_1$??? might lead to an overall increase in the efforts if the change in the number of indifferent customers is sufficiently big. Here moving closer to symmetry increases competition intensity.
+
+???give more details for these examples: $d\gamma/dx >0$; what is effect of assumptions on $dx_1/dx_{2}$???
 
 In contrast, the market for cola-flavored soft-drinks features a large amount of loyalty, with a moderate amount of asymmetry. Thus, $g'(\theta)>0$ and increasing the incentives of the weaker firm or reducing the incentives of the leader causes a decrease in competition and an overall decrease in total efforts.
 
@@ -157,6 +164,8 @@ If the efforts of the firm also augment its profit extraction from customers, th
 \frac{\d x_1}{\d x_2} &= A_i^{-1} \left(-g'(\theta^*)\gamma_1 - g(\theta^*)\frac{\partial \gamma_1}{\partial x_1}\right)\\
 A_i &= 1 - g'(\theta^*)\frac{\gamma_1}{c_1}-2g(\theta^*)\frac{\partial \gamma_1}{\partial x_1}-G(\theta^*)\frac{\partial^2 \gamma_1}{\partial^2 x_1}
 \end{align*}
+
+???why repeat the expressions???
 
 A sufficiently positive $g'(\theta)$ leads to an decrease in the effort of firm $1$ in response to an increase in the efforts of firm $2$. However, the reaction is now also determined by the changes to the market share. An increase in the efforts of firm $2$ leads to a decrease in the market shares of firm $1$. This lowers its incentives to use high efforts to extract monetary value from the firms. By encouraging the laggards in the smartphone sector, the third party also reduces the market share of the leading firms, who will then invest less in R\&D.
 
@@ -185,6 +194,8 @@ Can the increase of firm $2$'s efforts in this case lead to an increase of total
 \end{align*}
 Thus, total efforts only increase if the affect of $x_1$ on the value extraction is very small. If $\frac{\partial \gamma_1}{\partial x_1}=0$ it holds as the efforts are independent of the market share. However, if the efforts are very important in extracting value from the customers an increase in the efforts of any party leads to a decrease in the total efforts in the market.
 
+???so what is the benchmark that readers expect; strategic substitutes???
+
 \subsection{Loyalty}
 No consider the case of both firms having a loyal customer base such that $g'(\theta)>0$ to the right of the center.  Firm $2$ is the disadvantaged firm, with $x_2<x_1$. This can be due to a difference in costs or value extraction. The reaction function is:
 
@@ -198,7 +209,7 @@ The strength of the effect depends on the changes to the value extraction. In ge
 
 \subsection{Comparision}
 
-If customer loyalty is missing from the model, the only channel through which the efforts of the firms interact is the value extraction. If firm $2$ expands its market share at the expenses of firm $1$, firm $2$ has an additional incentive to have higher efforts and firm $1$ to reduce its efforts. This fact does not depend on the market shares, so supporting the weak firm always reduces the efforts of the leader.
+If customer loyalty is missing from the model, the only channel through which the efforts of the firms interact is the value extraction. If firm $2$ expands its market share at the expenses of firm $1$, firm $2$ has an additional incentive ???do you mean by ``additional'' that $dx_{1}/dx_{2} <0$? But in Nash equil. 2 takes $x_1$ as given??? to have higher efforts and firm $1$ to reduce its efforts. This fact does not depend on the market shares, so supporting the weak firm always reduces the efforts of the leader.
 
 The effect of total efforts depends on the relative size and the shape of the value extraction function. If the value extraction rate is concave, a higher level of total efforts can be achieved with more symmetric efforts. (intuitively yes, but formal proof necessary).
 
@@ -211,7 +222,7 @@ In the next period, both firms exert less efforts as $g(\theta^*)$ goes down. Ho
 \section{Other aspects}
 \begin{itemize}
 	\item Market shares determine investments. Are returns convex or concave?
-	\item Customers profit from investment. The large firm has more customers. If it invests more, it helps more people. 
+	\item Customers profit from investment. The large firm has more customers. If it invests more, it helps more people. ???socially optimal asymmetry???
 	\item What is the social optimum?
 	\item Switching costs?
 \end{itemize}
